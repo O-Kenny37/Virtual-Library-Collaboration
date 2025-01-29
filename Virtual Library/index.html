@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Library</title>
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <!-- <div class="header"> -->
+    <div class="header-left">
+
+      <div class="logo">
+        <img src="/img/virtual-library-book-logo.png" alt="logo">
+      </div>
+      <!-- /////////////////////////// -->
+      
+      <nav>
+        <ul>
+          <li> <a href="#">Home</a></li>
+          <li> <a href="#">Books</a></li>
+         
+          <!-- /////////////////////// -->
+        <div class="dropdown">
+          <button class="js-content1">Collections
+                <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content js-dropdown1">
+            <a href="">content</a>
+            <a href="">content</a>
+            <a href="">content</a>
+            <a href="">content</a>
+          </div>
+        </div>
+        <!-- //////////////////////// -->
+        <div class="dropdown">
+          <button class="js-content2">Categories
+                <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content js-dropdown2">
+            <a href="">content</a>
+            <a href="">content</a>
+            <a href="">content</a>
+            <a href="">content</a>
+          </div>
+        </div>
+        <!-- //////////////////////// -->
+        <div class="dropdown">
+          <button class="js-content3">Pages
+                <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content js-dropdown3">
+            <a href="">content</a>
+            <a href="">content</a>
+            <a href="">content</a>
+            <a href="">content</a>
+          </div>
+        </div>
+        <!-- /////// /////////////////-->
+        <li><a href="#">Contact</a></li>
+      </ul>
+      </nav>
+
+    </div>
+  <!-- ///////////////////////////// -->
+  <div class="hamburger-icon">
+    <span class="span-1"></span>
+    <span class="span-2"></span>
+    <span class="span-3"></span>
+  </div>
+  <!-- ///////////////////////////// -->
+  <div class="header-btn">
+    <button>
+      <i class="fa-solid fa-user"></i>
+      Login / Register
+    </button>
+  </div>
+  <!-- //////////////////////////// -->
+<!-- </div> -->
+</header>
+<!-- ////////////////////////////////////////// -->
+
+
+   <script>
+    let hamMenu = document.querySelector('.hamburger-icon');
+    let spanOne = document.querySelector('.span-1');
+    let spanTwo = document.querySelector('.span-2');
+    let spanThree = document.querySelector('.span-3');
+    let spanfour = document.querySelector('.fth-span');
+    let nav = document.querySelector('nav');
+
+    hamMenu.addEventListener('click', () => {
+      if(spanOne.classList.contains('first-span')) {
+        spanOne.classList.remove('first-span')
+        spanTwo.classList.remove('sec-span')
+        spanThree.classList.remove('third-span')
+        nav.style.display = "none";
+      } else {
+        spanOne.classList.add('first-span')  
+        spanTwo.classList.add('sec-span')  
+        spanThree.classList.add('third-span')  
+        nav.style.display = "block";
+      }
+    }); 
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+* {
+  margin: 0
+  padding 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: burlywood;  
+}
+nav ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+nav ul li a {
+  text-decoration: none;
+}
+.dropdown button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+} 
+.dropdown a {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.dropdown .dropdown-content {
+  border: 2px dotted black;
+  display: none;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+  position: absolute;
+  background-color: red;
+  width: 100px;
+  height: 150px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  padding-right: 6rem;
+  padding-bottom: 1rem;
+  border-bottom-right-radius: 40px;
+}
+.header-btn button {
+  border: none;
+  border-radius:        20px  30px;
+  background-color: blue;
+  padding: 15px;
+  color: white;
+}
+.header-btn i {
+  padding-right: 10px;
+}
+
+
+
+/* //////////////////////MEDIA QUERIES//////////// */
+
+@media (width < 500px) {
+body {
+  background-color: darkorange;
+  border: 2px solid black;
+}
+.header-btn {
+  display: none;
+}
+.header-left {
+ align-items: baseline;
+}
+nav {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  display: none;
+  background-color: cadetblue;
+}
+nav ul {
+  list-style-type: none;
+  display: block;
+}
+nav ul li {
+  margin-bottom: 2rem;
+}
+.dropdown button {
+  background: transparent;
+  margin-bottom: 2rem;
+  cursor: pointer;
+} 
+.dropdown a {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.dropdown .dropdown-content {
+  border: 2px dotted black;
+  display: none;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+/* ////////HAMBURGER ICON/////////// */
+.hamburger-icon {
+  position: relative;
+  top: 15%;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 50%;
+}
+.hamburger-icon span {
+  right: 10px;
+}
+.hamburger-icon .span-1 {
+  width: 30px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  top: 18px;
+}
+.hamburger-icon .span-2 {
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 26px;
+}
+.hamburger-icon .span-3 {
+  width: 25px;
+  height: 5px;
+  background-color: palevioletred;
+  position: absolute;
+  top: 33px;
+}
+.first-span {
+  transform: rotate(45deg);
+}
+.first-span2 {
+  transform: rotate(  0deg);
+}
+.sec-span {
+  transform: rotate(-45deg);
+}
+.third-span {
+  opacity: 0;
+}
+.fth-span {
+  background-color: darkturquoise;
+}
+
+}
